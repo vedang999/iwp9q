@@ -1,0 +1,21 @@
+<div class="wrapper" [ngClass]="{'light-mode': !nightMode, 'dark-mode': nightMode}">
+  <div class="content" role="main">
+    <p>IWP assignment due: 15th Sep <br> <strong>Roll no. BT21CSE081</strong><br>5th sem Btech CSE<br>
+    <a href="mailto:vedanglokhande2003@gmail.com" >vedanglokhande2003@gmail.com</a>
+    <button (click)="toggleNightMode()" class="night-mode-toggle" style="text-indent: 200px;">
+    Toggle Night Mode
+
+<!-- Night Mode Toggle Button -->
+  <span class="icon-sun"></span> <!-- Sun icon for light mode -->
+  <span class="icon-moon"></span> <!-- Moon icon for night mode -->
+</button>
+</p>
+    <div>
+      <h1>These are some questions and answers</h1>
+      <div *ngFor="let qa of qaList" class="qa-box">
+        <h3>{{ qa.question }}</h3>
+        <p [innerHTML]="qa.answer"></p>
+      </div>
+    </div>
+  </div>
+</div>
